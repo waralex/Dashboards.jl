@@ -82,7 +82,7 @@ module ComponentPackages
         
         meta_filename = joinpath(
             ROOT_PATH, 
-            Sys.iswindows() ? replace(package.source_path[2:end-1], "/" =>"\\") : package.source_path,
+            Sys.iswindows() ? replace(package.source_path[2:end-1], "/" =>"\\") : package.source_path[2:end],
             "metadata.json"
         ) 
         return load_components_meta(meta_filename)
