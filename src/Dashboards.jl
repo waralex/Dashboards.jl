@@ -491,7 +491,7 @@ function make_handler(app::Dash; debug::Bool = false)
                 if isa(e,PreventUpdate)                
                     return HTTP.Response(204)                                    
                 else
-                    throw(e)
+                    rethrow(e)
                 end
             end 
         end
